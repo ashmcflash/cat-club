@@ -1,3 +1,7 @@
+/* 
+Random Cat Fact Generator
+*/
+
 var factPlaceholder = document.getElementById("cat-fact");
 var showFact = document.getElementById("show-fact");
 

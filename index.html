@@ -9,7 +9,7 @@
 
 </head>
 <body>
-<body>
+      <!-- Links to Outside Sources -->
       <ul>
           <li><a href="https://validator.w3.org/nu/?doc=https%3A%2F%2Fashmcflash.github.io%2Fcat-club%2F">Page Validity</a></li>
           <li><a href="https://github.com/ashmcflash/cat-club">See the Code!</a></li>
@@ -18,7 +18,7 @@
     <div class="col-md-12">
       <form action="index.html" method="post">
         <h1> Sign Up </h1>
-        
+        <!-- Beginning of Sign Up Sheet-->
         <fieldset>
           
           <legend><span class="number">1</span> Your Basic Info</legend>
@@ -44,7 +44,7 @@
          <label for="bio">Bio:</label>
           <textarea id="bio" name="user_bio"></textarea>
         
-       
+          <!-- Dropdown Menu Options -->
         
          <label for="interests">What made you join?</label>
           <select id="interests" name="user_interests">
@@ -60,6 +60,8 @@
               <option value="boredom">Boredom</option>
             </optgroup>
           </select>
+
+          <!-- Checkboxes -->
           
           <label>Would you like to receive email updates on the following?</label>
           <input type="checkbox" id="kitty_facts" value="interests_kitties" name="user_interest"><label class="light" for="kitty_facts">Kitty Facts</label><br>
@@ -73,6 +75,9 @@
        </form>
         </div>
       </div>
+
+      <!-- Random Cat Fact Generator -->
+
       <p id="cat-fact">Click the button below to view a random cat fact!</p>
 <button id="show-fact">Show a Random Fact</button>
     </body>
