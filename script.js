@@ -1,3 +1,48 @@
+$(function () {
+  let petTypes = [
+    ["yes", ["Siamese", "Persian", "Maine Coon", "Ragdoll", "Sphynx", "Other"]],
+    ["no", ["Planning on adopting", "Allergies", "No cat :("]]
+  ];
+
+  $("#petCat").on("change", function (e) {
+    $("#petType").prop("disabled", false);
+
+    let inputval = this.value;
+
+    $.each(petTypes, function (key, value) 
+    {
+      lf (inputval === value[0]) 
+      {
+        $.each(value, function (nestkey, nestvalue) 
+        {
+          switch (nestkey) 
+          {
+            case 0:
+              $("label[for=petType]").text(nestvalue);
+              $("#petType").empty();
+              $("#petType").append(
+                $("<option>").text(`select a ${nestvalue} `)
+              );
+              break;
+            case 1:
+              $.each(nestvalue, function (namekey, namevalue) 
+              {
+                console.log(namekey, namevalue);
+
+                $("#petType").append(
+                  $("<option>").val(namevalue).text(namevalue)
+                  );
+                });
+                break;
+              }
+            });
+          }
+        });
+        
+      });
+      
+  });
+  
 /* 
 Random Cat Fact Generator
 */
@@ -20,4 +65,4 @@ function randomFact(){
 showFact.addEventListener('click', function(){
   factNumber = Math.floor(Math.random()*5);
   factPlaceholder.textContent = randomFact();
-});
+}); 
